@@ -1,0 +1,4 @@
+# Fichier sensibles
+.env
+backend/.env
+frontend/.env
