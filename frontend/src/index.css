@@ -1,68 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+
+/* ========== VARIABLES GLOBALES ========== */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Couleurs */
+  --color-primary: #3B82A6;
+  --color-secondary: #7CB8A6;
+  --color-background: #F5F7FA;
+  --color-text: #1E293B;
+  --color-error: #B44A4A;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Typographie */
+  --font-main: 'Roboto', sans-serif;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Font weights */
+  --font-regular: 400;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Tailles de texte */
+  --text-h1: 3.5rem;
+  --text-h2: 3rem;
+  --text-h3: 2.5rem;
+  --text-h4: 2rem;
+  --text-h5: 1.5rem;
+  --text-h6: 1.25rem;
+
+  --text-large-p: 1.25rem;
+  --text-medium-p: 1.125rem;
+  --text-normal-p: 1rem;
+  --text-small-p: 0.875rem;
+  --text-xsmall-p: 0.75rem;
+
+  /* Hauteur de ligne (corrigée pour lisibilité) */
+  --hauteur-h1: 3.85rem;
+  --hauteur-h2: 3.3rem;
+  --hauteur-h3: 2.75rem;
+  --hauteur-h4: 2.2rem;
+  --hauteur-h5: 1.65rem;
+  --hauteur-h6: 1.375rem;
+
+  --hauteur-large-p: 1.75rem;
+  --hauteur-medium-p: 1.6rem;
+  --hauteur-normal-p: 1.5rem;
+  --hauteur-small-p: 1.4rem;
+  --hauteur-xsmall-p: 1.3rem;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* ========== RESET DE BASE ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
 }
 
+/* ========== STYLES GLOBAUX ========== */
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ========== TYPOGRAPHIE TITRES ========== */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: var(--text-h1);
+  line-height: var(--hauteur-h1);
+  font-weight: var(--font-bold);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  font-size: var(--text-h2);
+  line-height: var(--hauteur-h2);
+  font-weight: var(--font-bold);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+h3 {
+  font-size: var(--text-h3);
+  line-height: var(--hauteur-h3);
+  font-weight: var(--font-semibold);
+}
+
+h4 {
+  font-size: var(--text-h4);
+  line-height: var(--hauteur-h4);
+  font-weight: var(--font-semibold);
+}
+
+h5 {
+  font-size: var(--text-h5);
+  line-height: var(--hauteur-h5);
+}
+
+h6 {
+  font-size: var(--text-h6);
+  line-height: var(--hauteur-h6);
+}
+
+/* ========== TEXTE PAR DÉFAUT ========== */
+p {
+  font-size: var(--text-normal-p);
+  line-height: var(--hauteur-normal-p);
+  font-weight: var(--font-regular);
+}
+
+/* ========== CLASSES UTILITAIRES TEXTE ========== */
+.text-large {
+  font-size: var(--text-large-p);
+  line-height: var(--hauteur-large-p);
+}
+
+.text-medium {
+  font-size: var(--text-medium-p);
+  line-height: var(--hauteur-medium-p);
+}
+
+.text-normal {
+  font-size: var(--text-normal-p);
+  line-height: var(--hauteur-normal-p);
+}
+
+.text-small {
+  font-size: var(--text-small-p);
+  line-height: var(--hauteur-small-p);
+}
+
+.text-xsmall {
+  font-size: var(--text-xsmall-p);
+  line-height: var(--hauteur-xsmall-p);
+}
+
+/* ========== POIDS DU TEXTE ========== */
+.text-regular {
+  font-weight: var(--font-regular);
+}
+
+.text-semibold {
+  font-weight: var(--font-semibold);
+}
+
+.text-bold {
+  font-weight: var(--font-bold);
+}
+
+/* ========== VERSION MOBILE ========== */
+@media (max-width: 768px) {
+:root {
+    --text-h1: 2.2rem;
+    --text-h2: 1.8rem;
+    --text-h3: 1.5rem;
+    --text-h4: 1.3rem;
+
+    --text-large-p: 1.1rem;
+    --text-medium-p: 1rem;
+    --text-normal-p: 0.95rem;
+    --text-small-p: 0.85rem;
   }
 }
