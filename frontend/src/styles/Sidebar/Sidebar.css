@@ -3,9 +3,10 @@
 
 .sidebar {
   width: 240px;
-  background: var(--color-primary);
-  color: white;
+  background: var(--color-background);
+  color: var(--color-primary);
   padding: 1.5rem 1rem;
+  margin-left: 1.25rem;
   display: flex;
   flex-direction: column;
 }
@@ -27,7 +28,7 @@
   gap: 0.75rem;
   background: transparent;
   border: none;
-  color: white;
+  color: var(--color-text);
   padding: 0.75rem;
   border-radius: 8px;
   cursor: pointer;
@@ -36,5 +37,5 @@
 }
 
 .sidebar-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-primary);
 }

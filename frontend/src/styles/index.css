@@ -6,6 +6,7 @@
   --color-primary: #3B82A6;
   --color-secondary: #7CB8A6;
   --color-background: #F5F7FA;
+  --color-fond: #FFFFFF;
   --color-text: #1E293B;
   --color-error: #B44A4A;
 
@@ -58,7 +59,7 @@
 /* ========== STYLES GLOBAUX ========== */
 body {
   font-family: var(--font-main);
-  background-color: var(--color-background);
+  background-color: var(--color-fond);
   color: var(--color-text);
   line-height: 1.6;
 }

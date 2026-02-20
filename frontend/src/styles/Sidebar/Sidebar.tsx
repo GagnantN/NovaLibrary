@@ -1,10 +1,11 @@
 import { FaHome, FaBook, FaUser } from 'react-icons/fa'
 import "./Sidebar.css"
+import Logo from "../../assets/Logo-Nova.png"
 
 function Sidebar() {
     return (
         <aside className="sidebar">
-            <h2 className="logo">Nova</h2>
+            <img src={Logo} alt='Logo Nova Library'/>
 
             <nav>
             <button className="sidebar-btn">
