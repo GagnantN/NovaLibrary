@@ -17,4 +17,5 @@
   flex: 1;
   padding: 2rem;
   background: var(--color-background);
+  margin: 1.25rem;
 }
