@@ -5,8 +5,7 @@
   width: auto;
   background: var(--color-background);
   padding: 0 2rem;
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
+  margin: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
