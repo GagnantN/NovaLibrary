@@ -2,8 +2,11 @@
 
 .header {
   height: 70px;
-  background: white;
+  width: auto;
+  background: var(--color-background);
   padding: 0 2rem;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

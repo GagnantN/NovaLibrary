@@ -5,7 +5,7 @@ function Header() {
          <header className="header">
           <input
             type="text"
-            placeholder="Rechercher..."
+            placeholder="Rechercher un livre..."
             className="search-input"
           />
 
