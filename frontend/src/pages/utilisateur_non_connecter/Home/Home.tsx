@@ -4,19 +4,19 @@ import Sidebar from '../../../styles/Sidebar/Sidebar'
 import Header from '../../../styles/Header/Header'
 
 const Home: React.FC = () => {
-    return (
-        /* Importation de la Sidebar */
-        
+    return (    
         <div className="layout">
+            {/* IMPORTATION SIDEBAR */}
             <Sidebar />
-            <Header />
             {/* ZONE PRINCIPALE */}
-            <div className="main-area"></div>
-            {/* CONTENU */}
-            <main className="content">
-            <h1>Bienvenue sur Nova Library</h1>
-            <p>Ton contenu apparaîtra ici.</p>
-            </main>
+            <div className="main-area">
+                <Header />
+                {/* CONTENU */}
+                <main className="content">
+                    <h1>Bienvenue sur Nova Library</h1>
+                    <p>Ton contenu apparaîtra ici.</p>
+                </main>
+            </div>
         </div>
     )
 }
